@@ -37,7 +37,7 @@ public class rotate : MonoBehaviour {
             }
             if (Input.GetKey(KeyCode.D) && (center.transform.rotation.eulerAngles.z - Time.deltaTime * speed) > 15)
             {
-                print(center.transform.rotation.eulerAngles.z);
+               // print(center.transform.rotation.eulerAngles.z);
                 center.transform.Rotate(new Vector3(0, 0, -Time.deltaTime * speed));
             }
         }
