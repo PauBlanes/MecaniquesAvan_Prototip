@@ -1,19 +1,19 @@
-﻿//Aquest Script es posarà a la càmara (també podriem girar tot el mapa sense problemes, però així és una mica més senzill)
+﻿//Aquest Script es posarà a la càmara (també podriem girar tot el mapa sense problemes, però amb la càmara és tant senzill com afegir el script i ja està)
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class spinCamera : MonoBehaviour {
-    //encara no he pogut fer proves perque no tinc el Unity del tot instal·lat, de fet he hagut de programar una mica "a pelo"
-    
     public bool spinIsActive        = false;            //posar a true quan comenci la partida
-    public float SPIN_WAIT_TIME     = 5.0f;
+    public float SPIN_WAIT_TIME     = 4.0f;
     public float MAX_SPIN_DURATION  = 2.0f;
-    public float SPIN_SPEED         = 50.0f;
+    public float SPIN_SPEED         = 45.0f;
 
     private float nextSpinCooldown      = 0;            //temps fins a la pròxima vegada que girarà
     private float currentSpinCooldown   = 0;            //temps que es passarà fent el gir actual
     private bool spinningState = false;
+
+    float randomDir = 1;
 
     void Start () {
         nextSpinCooldown    = SPIN_WAIT_TIME;
@@ -26,8 +26,7 @@ public class spinCamera : MonoBehaviour {
         {
             if (spinningState)  //girant
             {
-                //float randomDir = random(); //random que sigui -1 o 1
-                //gameObject.transform.Rotate(new Vector3(0, 0, randomDir*Time.deltaTime * SPIN_SPEED));
+                gameObject.transform.Rotate(new Vector3(0, 0, randomDir*Time.deltaTime * SPIN_SPEED));
                 currentSpinCooldown -= Time.deltaTime;
 
                 if (currentSpinCooldown <= 0)
@@ -43,6 +42,7 @@ public class spinCamera : MonoBehaviour {
                 {
                     nextSpinCooldown = SPIN_WAIT_TIME;
                     spinningState = true;
+                    randomDir = (Random.Range(-1.0f, 1.0f) > 0 ? 1 : -1);       //random que serà -1 o 1
                 }
             }
         }
