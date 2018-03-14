@@ -14,9 +14,11 @@ public class ballScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		rb.velocity = new Vector2(0,1);
+		if (MiniGame.isBLUE)
+			rb.velocity = new Vector2(0,1);
+		else
+			rb.velocity = new Vector2(0,-1);
 		currentVel = startVel;
-
 	}
 	
 	// Update is called once per frame

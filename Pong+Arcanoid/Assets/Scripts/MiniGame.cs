@@ -9,7 +9,7 @@ public class MiniGame : MonoBehaviour {
 	public Text timeText;
 	private float timeCount = 0;
 	private Direcction dir;
-	private bool isBLUE;
+	public static bool isBLUE;
 	// Use this for initialization
 	void Start () {
 		timeText.text = "0";
@@ -19,7 +19,7 @@ public class MiniGame : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timeCount+=Time.deltaTime;
-		timeText.text=timeCount.ToString("f0");
+		timeText.text= (3-timeCount).ToString("f0");
 
 		if(timeCount>=3){	
 			timeText.text=dir.ToString();
@@ -55,9 +55,9 @@ public class MiniGame : MonoBehaviour {
 				isBLUE=false;
 				Application.LoadLevel("Main");
 			}
-			else if(Input.anyKeyDown){
+			/*else if(Input.anyKeyDown){
 				dir = (Direcction)Random.Range(0, 4);
-			}
+			}*/
 		}
 	}
 }
