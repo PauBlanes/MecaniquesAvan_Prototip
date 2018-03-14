@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ball
+  - blueWall
+  - redWall
+  - redSphere
+  - blueSphere
   layers:
   - Default
   - TransparentFX

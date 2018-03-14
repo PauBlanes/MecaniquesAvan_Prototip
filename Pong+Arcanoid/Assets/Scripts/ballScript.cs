@@ -15,9 +15,9 @@ public class ballScript : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		if (MiniGame.isBLUE)
-			rb.velocity = new Vector2(0,1);
+			StartCoroutine (SpawnBall (new Vector2 (0, 1)));
 		else
-			rb.velocity = new Vector2(0,-1);
+			StartCoroutine (SpawnBall (new Vector2 (0, -1)));
 		currentVel = startVel;
 	}
 	
@@ -59,6 +59,37 @@ public class ballScript : MonoBehaviour {
 			currentVel = startVel;
 		
 		rb.velocity = rb.velocity.normalized * currentVel;
+	}
+	IEnumerator SpawnBall (Vector2 newVel) {
+		transform.position = Vector3.zero;
+		rb.velocity = Vector2.zero;
+		yield return new WaitForSeconds (1);
+		rb.velocity = newVel;
+		ResetVel ();
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.transform.tag == "blueWall") {
+			ResetVel ();
+			ScoreManager.redScore++;
+			Destroy (collision.gameObject);
+		}
+		if (collision.transform.tag == "blueSphere") {			
+			ScoreManager.redScore+=5;
+
+			StartCoroutine (SpawnBall (new Vector2 (0, 1)));
+		}
+		if (collision.transform.tag == "redWall") {
+			ResetVel ();
+			ScoreManager.blueScore++;
+			Destroy (collision.gameObject);
+		}
+		if (collision.transform.tag == "redSphere") {			
+			ScoreManager.blueScore+=5;
+			StartCoroutine (SpawnBall (new Vector2 (0, -1)));
+		}
+
 	}
 
 
