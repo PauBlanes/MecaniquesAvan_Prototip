@@ -9,6 +9,7 @@ TagManager:
   - redWall
   - redSphere
   - blueSphere
+  - PowerUp_Velocity
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - ball
+  - powerUp
   - 
   - 
   - 

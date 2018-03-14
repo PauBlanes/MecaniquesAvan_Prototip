@@ -778,6 +778,7 @@ GameObject:
   - component: {fileID: 278282542}
   - component: {fileID: 278282546}
   - component: {fileID: 278282547}
+  - component: {fileID: 278282548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -879,6 +880,19 @@ MonoBehaviour:
   SPIN_WAIT_TIME: 5.5
   MAX_SPIN_DURATION: 2.7
   SPIN_SPEED: 45
+--- !u!114 &278282548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 278282541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f993f2c0bae1814d8e7d4fdb1796056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1014686103873106, guid: 4733ac3d789bdb14d9277de65b8ff848, type: 2}
 --- !u!1 &311490684
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,9 +904,10 @@ GameObject:
   - component: {fileID: 311490687}
   - component: {fileID: 311490686}
   - component: {fileID: 311490688}
+  - component: {fileID: 311490689}
   m_Layer: 0
   m_Name: playerSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -993,6 +1008,17 @@ MonoBehaviour:
   speed: 175
   center: {fileID: 1388432900}
   down: 0
+--- !u!114 &311490689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311490684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bae3a49cad328b4ea7605603da0f055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &351716838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1799,7 @@ GameObject:
   - component: {fileID: 784188814}
   - component: {fileID: 784188817}
   - component: {fileID: 784188818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ball
   m_TagString: ball
   m_Icon: {fileID: 0}
@@ -1895,9 +1921,10 @@ GameObject:
   - component: {fileID: 844890765}
   - component: {fileID: 844890764}
   - component: {fileID: 844890766}
+  - component: {fileID: 844890767}
   m_Layer: 0
   m_Name: playerSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1998,6 +2025,17 @@ MonoBehaviour:
   speed: 175
   center: {fileID: 1211657465}
   down: 1
+--- !u!114 &844890767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844890762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bae3a49cad328b4ea7605603da0f055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &979290626
 GameObject:
   m_ObjectHideFlags: 0

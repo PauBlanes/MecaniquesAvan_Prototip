@@ -54,10 +54,15 @@
      <Compile Include="Assets\Scripts\ballScript.cs" />
      <Compile Include="Assets\Scripts\DestroyWall.cs" />
      <Compile Include="Assets\Scripts\MiniGame.cs" />
+     <Compile Include="Assets\Scripts\PowerUp.cs" />
+     <Compile Include="Assets\Scripts\PowerUp_Player.cs" />
+     <Compile Include="Assets\Scripts\PowerUp_System.cs" />
+     <Compile Include="Assets\Scripts\PowerUp_Velocity.cs" />
      <Compile Include="Assets\Scripts\quickPressMinigame.cs" />
      <Compile Include="Assets\Scripts\rotate.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\spinCamera.cs" />
+     <Compile Include="Assets\Scripts\StartMenu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
