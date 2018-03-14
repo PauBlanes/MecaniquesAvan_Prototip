@@ -8,7 +8,7 @@ public class StartMenu : MonoBehaviour {
 	void Start () {}
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             Application.LoadLevel("MiniGame");
         }
