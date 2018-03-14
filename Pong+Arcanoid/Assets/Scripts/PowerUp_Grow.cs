@@ -7,6 +7,7 @@ public class PowerUp_Grow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameObject.transform.localScale += new Vector3 (0.15f, 0f, 0f);
+		StartCoroutine (DieWhenReady ());
 	}
 	
 	// Update is called once per frame

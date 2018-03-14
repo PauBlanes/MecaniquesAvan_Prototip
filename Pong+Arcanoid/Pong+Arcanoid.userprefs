@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PowerUp_Grow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ballScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\ballScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ballScript.cs" Line="31" Column="81" />
       <File FileName="Assets\Scripts\PowerUp_System.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PowerUp_Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PowerUp_Velocity.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\rotate.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PowerUp_Grow.cs" Line="18" Column="55" />
+      <File FileName="Assets\Scripts\PowerUp_Grow.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

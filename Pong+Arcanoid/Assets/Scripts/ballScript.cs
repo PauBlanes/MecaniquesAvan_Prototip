@@ -24,9 +24,11 @@ public class ballScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//mentre tenim la bola agafada la velocitat va aumentant i la pala es fa petita
-		if (catched && currentVel < 10) {
-			currentVel += 3 * Time.deltaTime;
+		if (catched && currentVel < 12) {
+			currentVel += 4 * Time.deltaTime;
 			paddle.localScale -= new Vector3 (0.12f * Time.deltaTime, 0, 0);
+			if (paddle.localScale.x < 0.05)
+				paddle.localScale = new Vector3 (Mathf.Clamp (paddle.localScale.x, 0.05f, 10f), paddle.localScale.y, paddle.localScale.z);
 		}
 	}
 	void LateUpdate () {
