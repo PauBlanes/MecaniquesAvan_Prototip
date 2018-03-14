@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\DestroyWall.cs" />
      <Compile Include="Assets\Scripts\MiniGame.cs" />
      <Compile Include="Assets\Scripts\PowerUp.cs" />
+     <Compile Include="Assets\Scripts\PowerUp_Grow.cs" />
      <Compile Include="Assets\Scripts\PowerUp_Player.cs" />
      <Compile Include="Assets\Scripts\PowerUp_System.cs" />
      <Compile Include="Assets\Scripts\PowerUp_Velocity.cs" />

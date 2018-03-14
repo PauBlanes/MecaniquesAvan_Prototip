@@ -18,9 +18,9 @@ public class PowerUp_Player : MonoBehaviour {
             gameObject.AddComponent<PowerUp_Velocity>();
         }
 
-        if (coll.gameObject.tag == "ExtraBall")
+        if (coll.gameObject.tag == "PowerUp_Grow")
         {
-
+			gameObject.AddComponent<PowerUp_Grow>();
         }
 
         if (coll.gameObject.tag == "ExtraPaddle")

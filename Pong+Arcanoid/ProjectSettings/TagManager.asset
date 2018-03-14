@@ -10,6 +10,7 @@ TagManager:
   - redSphere
   - blueSphere
   - PowerUp_Velocity
+  - PowerUp_Grow
   layers:
   - Default
   - TransparentFX
